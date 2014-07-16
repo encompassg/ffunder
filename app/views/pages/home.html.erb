@@ -1,4 +1,7 @@
 <div class="jumbotron center">
+	<% if user_signed_in? %>
+		<h1> Welcome </h1>
+	<% else %>
 	<h1>Find Your Small Business Loan</h1>
 	<p>
 		Instanly discover your available loan options and secure the best offer, all in one place.
@@ -8,4 +11,5 @@
 	 <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
  </p>
+ <% end %>
 </div>
