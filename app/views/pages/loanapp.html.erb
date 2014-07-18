@@ -1,2 +1,85 @@
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
 <h1>FundFinder Application</h1>
-  
+<body class="registrations" data-env="production" id="registrations-new"><script type="text/javascript"></script>
+	<div class="borrower-application">
+	<div class="contained"><div class="container xlarge-padding-top">
+</div>
+
+
+  <div class="form-header">
+  	<h3>First, tell us about the loan you need.</h3>
+  </div>
+<form accept-charset="UTF-8" action="/home/index" method="post">
+  <div style="margin:0;padding:0">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+    <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
+  </div>
+  	
+
+  	<div class="form-inputs">
+  			<div class="input string optional borrower_loan_amount">
+  				<label class="string optional" for="borrower_loan_amount">Loan Amount</label><input class="string optional money prevent_zero" data-parsley-error-message="Please enter a loan amount greater than $2,500 and below $5,000,000." data-parsley-remote="/borrowers/validate" data-parsley-trigger="blur" id="borrower_loan_amount" maxlength="20" name="borrower[loan_amount]" required="required" size="20" type="text"/>
+  			</div>
+  	</div>
+
+  		<div class="form-tip" id="form-tip-borrower_loan_purpose_id">
+  			<div class="nipple">
+  		</div>
+  		<div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>Why do you need this loan?</h6><p>What are you going to do with the money?</p>
+  		</div>
+  	</div>
+  	<div class="form-tip" id="form-tip-borrower_starting_a_business"><div class="nipple">
+  	</div>
+  	<div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>Starting a Business</h6><p>Unfortunately Fundby's lender network requires your business to be at least 6 months old before providing funding. However, if you complete the application we have resources available to help you start your business.</p></div>
+  </div>
+  <div class="input select optional borrower_loan_purpose"><label class="select optional" for="borrower_loan_purpose_id">Loan Purpose</label><select class="select optional" data-parsley-trigger="blur" id="borrower_loan_purpose_id" name="borrower[loan_purpose_id]" required="required"><option value=""></option>
+<option value="11">Acquisition</option>
+<option value="2">Buyout A Partner</option>
+<option value="1">Expansion</option>
+<option value="3">Marketing/Advertising</option>
+<option value="8">Purchase Equipment</option>
+<option value="6">Refinance / Consolidate Debt</option>
+<option value="7">Remodel an existing location</option>
+<option value="9">Repair Equipment</option>
+<option value="4">Starting a Business</option>
+<option value="5">Working Capital</option>
+<option value="10">Other</option></select>
+</div>
+<div class="form-tip" id="form-tip-borrower_loan_priority_cd"><div class="nipple">
+</div>
+<div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>What is most important to you?</h6><p>Tell us what is most important to you when applying for financing.</p>
+</div>
+</div>
+<div class="input select optional borrower_loan_priority"><label class="select optional" for="borrower_loan_priority_id">Loan Priority</label><select class="select optional" data-parsley-trigger="blur" id="borrower_loan_priority_id" name="borrower[loan_priority_id]" required="required"><option value=""></option>
+<option value="1">Lowest Interest Rate</option>
+<option value="2">Fastest time to funding</option>
+<option value="3">Longest repayment period</option>
+<option value="4">No collateral required</option>
+<option value="5">Least amount of required documentation</option></select>
+</div>
+<hr/><div class="cf">
+</div>
+<div class="form-tip" id="form-tip-borrower_email">
+	<div class="nipple"></div><div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>Email Confirmation</h6><p>Upon signup, we'll send you a link to verify your email address.</p></div></div><div class="input email optional borrower_email"><label class="email optional" for="borrower_email">Email</label><input class="string email optional " data-parsley-remote="/borrowers/validate" data-parsley-trigger="blur" id="borrower_email" maxlength="255" name="borrower[email]" required="required" size="255" type="email" value=""/></div><div class="form-tip" id="form-tip-borrower_password">
+	<div class="nipple">
+	</div>
+	<div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>Password requirements</h6><p>Password must have one digit and be at least 8 characters.</p>
+	</div>
+</div>
+<div class="input password optional borrower_password"><label class="password optional" for="borrower_password">Password</label><input class="password optional" data-parsley-error-message="Password must have one digit and be at least 8 characters." data-parsley-pattern="^.*(?=.{8,})(?=.*\d).*$" data-parsley-trigger="blur" id="borrower_password" maxlength="128" name="borrower[password]" required="required" size="128" type="password"/>
+</div>
+</div>
+</div>
+<div class="pure-u-1-2">
+</div>
+</div>
+<div id="submit-button"><hr/>
+	<div class="cf">
+	</div>
+	<div class="pure-g-u button-area">
+		<div class="pure-u-1-2 right"><button class="primary right" id="next-btn" name="borrower[direction]" type="submit" value="next_step">Next <i class="fa fa-arrow-right"></i></button>
+		</div>
+		<div class="pure-u-1-2"><p class="agree kievit">By clicking "Next", you agree to our <a href="/tos" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a></p></div></div></div></form></div></div></div><div id="application-footer"><div class="application-footer-container pure-g-r contained"><div class="help-footer pure-u-1-2"><ul class="help-box no-print"><li><i class="fa fa-phone-square"></i><div class="support-phone-number"><div class="masked">1 (800) FUNDBY</div><div class="real">1 (800) 386-3311</div></div></li><li><i class="fa fa-envelope"></i><a href="mailto:support@fundby.com">support@fundby.com</a></li></ul></div><div class="custom-security-seals pure-u-1-2"><i class="fa fa-lock"></i><p>We apply bank level security standards.</p><div class="pure-g-r seals">
+		</body>

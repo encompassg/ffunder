@@ -3,14 +3,23 @@
     <h1>Sign up</h1>
   </div>
 
+
+
+
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-
+    
+    <div class="form-inputs">
+        <div class="input string optional borrower_loan_amount">
+          <label class="string optional" for="borrower_loan_amount">Loan Amount</label><input class="string optional money prevent_zero" data-parsley-error-message="Please enter a loan amount greater than $2,500 and below $5,000,000." data-parsley-remote="/borrowers/validate" data-parsley-trigger="blur" id="borrower_loan_amount" maxlength="20" name="borrower[loan_amount]" required="required" size="20" type="text"/>
+        </div>
+    </div>
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
+
 
       <div class="form-group">
         <%= f.label :password %>
