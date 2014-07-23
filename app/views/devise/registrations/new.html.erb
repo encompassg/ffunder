@@ -3,7 +3,11 @@
     <h1>Sign up</h1>
   </div>
 
+<script src="jquery.js"></script>
+<script src="parsley.min.js"></script>
 
+
+<form data-parsley-validate>
 
 
   <div class="panel-body">
@@ -11,10 +15,40 @@
       <%= devise_error_messages! %>
     
     <div class="form-inputs">
-        <div class="input string optional borrower_loan_amount">
+      <div class="input string optional borrower_loan_amount">
           <label class="string optional" for="borrower_loan_amount">Loan Amount</label><input class="string optional money prevent_zero" data-parsley-error-message="Please enter a loan amount greater than $2,500 and below $5,000,000." data-parsley-remote="/borrowers/validate" data-parsley-trigger="blur" id="borrower_loan_amount" maxlength="20" name="borrower[loan_amount]" required="required" size="20" type="text"/>
+      </div>
+        <div class="form-tip" id="form-tip-borrower_loan_purpose_id">
+           <div class="nipple">
+           </div>
+          <div class="form-tip-content rounded"><h6 class="helvetica"><i class="fa fa-info-circle"></i>Why do you need this loan?</h6><p>What are you going to do with the money?</p>
+          </div>
         </div>
+          <div class="form-tip" id="form-tip-borrower_starting_a_business">
+            <div class="nipple">
+          </div>
+            <div class="form-tip-content rounded">
+              <h6 class="helvetica">
+              <i class="fa fa-info-circle"></i>Starting a Business</h6>
+              <p>Unfortunately Fundby's lender network requires your business to be at least 6 months old before providing funding. However, if you complete the application we have resources available to help you start your business.</p>
+            </div>
+          </div>
+      </div>
+    
     </div>
+   <div class="input select optional borrower_loan_purpose"><label class="select optional" for="borrower_loan_purpose_id">Loan Purpose</label><select class="select optional" data-parsley-trigger="blur" id="borrower_loan_purpose_id" name="borrower[loan_purpose_id]" required="required"><option value=""></option>
+<option value="11">Acquisition</option>
+<option value="2">Buyout A Partner</option>
+<option value="1">Expansion</option>
+<option value="3">Marketing/Advertising</option>
+<option value="8">Purchase Equipment</option>
+<option value="6">Refinance / Consolidate Debt</option>
+<option value="7">Remodel an existing location</option>
+<option value="9">Repair Equipment</option>
+<option value="4">Starting a Business</option>
+<option value="5">Working Capital</option>
+<option value="10">Other</option></select>
+</div>
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -36,3 +70,4 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
+</form>

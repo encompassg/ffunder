@@ -15,6 +15,7 @@ gem 'devise', '~> 3.2.4'
 gem 'simple_form'
 gem 'elasticsearch-rails', '~> 0.1.4'
 gem 'font-awesome-sass'
+gem 'parsley-rails'
 # Use jquery as the JavaScript library
 group :development, :test do |variable|
 	gem 'sqlite3'
